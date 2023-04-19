@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://rudrakshh:rudrakshh@connectech.xbuhnmu.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "151d3da2632c393586cf",
+    "githubSecret": "0a78227b4fd00fe7e1e89470519d098165034074"
+}
