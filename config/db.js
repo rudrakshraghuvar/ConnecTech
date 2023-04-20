@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('config');
-const db = config.get('mongoURI');
+require('dotenv').config();
+const db = process.env.MONGOURI;
 
 mongoose.set("strictQuery", false);
 
@@ -9,7 +10,7 @@ const connectDB = async () => {
         await mongoose.connect(db);
 
         console.log('MongoDB Connected...');
-    } catch(err) {
+    } catch (err) {
         console.log(err.message);
         // Exit process with failure
         process.exit(1);
