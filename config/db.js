@@ -7,7 +7,7 @@ mongoose.set("strictQuery", false);
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(db);
+        await mongoose.connect("mongodb+srv://rudrakshh:rudrakshh@connectech.xbuhnmu.mongodb.net/?retryWrites=true&w=majority");
 
         console.log('MongoDB Connected...');
     } catch (err) {
