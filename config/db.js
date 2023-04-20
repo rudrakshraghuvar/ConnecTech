@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 const config = require('config');
-require('dotenv').config();
-const db = process.env.MONGOURI;
+const db = config.get("mongoURI");
+// require('dotenv').config();
+// const db = process.env.MONGOURI;
 
 mongoose.set("strictQuery", false);
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb+srv://rudrakshh:rudrakshh@connectech.xbuhnmu.mongodb.net/?retryWrites=true&w=majority");
+        await mongoose.connect(db);
 
         console.log('MongoDB Connected...');
     } catch (err) {
